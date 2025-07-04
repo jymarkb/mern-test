@@ -9,9 +9,9 @@
     "dev:server": "nodemon --watch src --ext ts --exec \"tsx src/server.ts\"",
     "dev:client": "vite",
     "build": "vite build && tsc",
+    "database": "docker-compose up --build -d",
     "migrate": "prisma migrate dev",
     "seed": "node --loader ts-node/esm prisma/seeder/init.ts",
-    "database": "docker-compose up --build -d"
   },
   "dependencies": {
     "@prisma/client": "^6.11.1",
