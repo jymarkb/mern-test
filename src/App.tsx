@@ -1,8 +1,12 @@
-export default function App() {
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './Route/react/Router';
+const App = () => {
     return (
-      <div className="p-4 text-blue-600 text-xl font-bold">
-        Hello from React + TSX + Tailwind + ShadCN!
-      </div>
+      <BrowserRouter>
+        <AppRoutes/>
+      </BrowserRouter>
     );
   }
   
+
+export default App;
