@@ -1,0 +1,48 @@
+{
+  "name": "mern-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"yarn dev:server\" \"yarn dev:client\"",
+    "dev:server": "nodemon --watch src --ext ts --exec \"tsx src/server.ts\"",
+    "dev:client": "vite",
+    "build": "vite build && tsc",
+    "migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.11.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "react": "18",
+    "react-dom": "18",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.10",
+    "@vitejs/plugin-react": "^4.6.0",
+    "autoprefixer": "^10.4.21",
+    "class-variance-authority": "^0.7.1",
+    "concurrently": "^9.2.0",
+    "lucide-react": "^0.525.0",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.6",
+    "shadcn-ui": "^0.9.5",
+    "tailwindcss": "^4.1.11",
+    "tailwindcss-animate": "^1.0.7",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.2"
+  },
+  "packageManager": "yarn@4.9.2"
+}
