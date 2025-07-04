@@ -9,7 +9,9 @@
     "dev:server": "nodemon --watch src --ext ts --exec \"tsx src/server.ts\"",
     "dev:client": "vite",
     "build": "vite build && tsc",
-    "migrate": "prisma migrate dev"
+    "migrate": "prisma migrate dev",
+    "seed": "node --loader ts-node/esm prisma/seeder/init.ts",
+    "database": "docker-compose up --build -d"
   },
   "dependencies": {
     "@prisma/client": "^6.11.1",
@@ -19,7 +21,8 @@
     "express": "^5.1.0",
     "react": "18",
     "react-dom": "18",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "world-countries": "^5.1.0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -36,9 +39,11 @@
     "lucide-react": "^0.525.0",
     "nodemon": "^3.1.10",
     "postcss": "^8.5.6",
+    "prisma": "^6.11.1",
     "shadcn-ui": "^0.9.5",
     "tailwindcss": "^4.1.11",
     "tailwindcss-animate": "^1.0.7",
+    "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
