@@ -3,8 +3,9 @@ import { fallbackImage } from "@/pages/actions/Employee/validate";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, SquarePen, Trash } from "lucide-react";
 import { Button } from "./ui/button";
-import { handleDelete, handleEdit } from "@/pages/actions/Employee/tableAction";
+import { handleEdit } from "@/pages/actions/Employee/tableAction";
 import ButtonWithDialog from "./ButtonWithDialog";
+import { API_URL } from "@/lib/api";
 
 export const columns: ColumnDef<TableEmployee>[] = [
   {
@@ -13,7 +14,7 @@ export const columns: ColumnDef<TableEmployee>[] = [
     cell: ({ row }) => (
       <div className="flex justify-center py-1">
         <img
-          src={`upload/${row.getValue("photo")}`}
+          src={`${API_URL}/assets/${row.getValue("photo")}`}
           alt="employee photo"
           className="w-12 h-12 object-cover"
           onError={(e) => fallbackImage(e)}

@@ -1,6 +1,6 @@
-import { URL } from "@/lib/api";
+import { API_URL } from "@/lib/api";
 const getEmployeeById = async(id: string) =>{
-    const url = `${URL}/employees/${id}`;
+    const url = `${API_URL}/employees/${id}`;
     const fetchData = await fetch(url)
     return await fetchData.json();
 }

@@ -1,6 +1,6 @@
-import { URL } from "@/lib/api";
+import { API_URL } from "@/lib/api";
 const fetchAcountType = async () => {
-    const url = `${URL}/accountType`;
+    const url = `${API_URL}/accountType`;
     const response = await fetch(url);
     return await response.json();
 }

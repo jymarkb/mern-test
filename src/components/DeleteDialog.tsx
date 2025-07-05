@@ -4,6 +4,7 @@ import { XIcon } from "lucide-react";
 import { cn, DeleteDialogType } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { fallbackImage } from "@/pages/actions/Employee/validate";
+import { API_URL } from "@/lib/api";
 
 const DeleteDialog: React.FC<DeleteDialogType> = ({
   isOpen,
@@ -35,7 +36,7 @@ const DeleteDialog: React.FC<DeleteDialogType> = ({
           <div className="flex mt-2 gap-4">
             <div className="image-wrapper">
               <img
-                src={`upload/${data.photo}`}
+                src={`${API_URL}/assets/${data.photo}`}
                 alt="employee image"
                 height={100}
                 width={100}

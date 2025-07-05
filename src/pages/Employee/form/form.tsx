@@ -23,6 +23,7 @@ import {
 } from "@/pages/actions/Employee/actionEmployee";
 import { useNavigate, useParams } from "react-router-dom";
 import getEmployeeById from "@/pages/actions/Employee/fetchOneEmployee";
+import { API_URL } from "@/lib/api";
 
 const EmployeeForm = ({ params }: { params: string }) => {
   const navigate = useNavigate();
@@ -77,7 +78,7 @@ const EmployeeForm = ({ params }: { params: string }) => {
           setEmployeeData(data);
 
           if (data) {
-            setPreviewSrc(`/upload/${data.photo}`);
+            setPreviewSrc(`${API_URL}/assets/${data.photo}`);
             setSelectedCountry(String(data.countryId));
             setSelectedType(String(data.typeId));
           }

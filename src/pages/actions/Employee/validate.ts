@@ -1,4 +1,5 @@
 import { toast } from "sonner";
+import { API_URL } from "@/lib/api";
 export const handleTel = (e: React.SyntheticEvent) => {
   const input = e.target as HTMLInputElement;
   input.value = input.value.replace(/[^0-9+]/g, "");
@@ -6,7 +7,7 @@ export const handleTel = (e: React.SyntheticEvent) => {
 
 export const fallbackImage = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
   e.currentTarget.onerror = null;
-  e.currentTarget.src = "/upload/temp.jpg";
+  e.currentTarget.src = `${API_URL}/assets/temp.jpg`;
 };
 
 export const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
