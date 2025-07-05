@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      port: 3000,
+      port: Number(env.VITE_PORT),
     },
     define: {
       "import.meta.env.VITE_BACKEND_URL": JSON.stringify(env.VITE_BACKEND_URL),

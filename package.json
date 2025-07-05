@@ -8,6 +8,7 @@
     "dev": "concurrently \"yarn dev:server\" \"yarn dev:client\"",
     "dev:server": "nodemon --watch src --ext ts --exec \"tsx src/server.ts\"",
     "dev:client": "vite",
+    "build:full": "vite build && tsc",
     "build": "vite build && tsc",
     "database": "docker-compose up --build -d",
     "migrate": "prisma migrate dev",

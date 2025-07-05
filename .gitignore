@@ -3,3 +3,4 @@ node_modules
 /generated
 /src/public/upload/*
 .yarn
+/src/dist/*
