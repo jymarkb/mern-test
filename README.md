@@ -54,6 +54,7 @@ yarn dev
 yarn database
 ```
 
-## 🔒 Test Account Supabase Auth
-**email** = testuser@jymarkb.cloud  
-**password** = @12345678
+## 🔒 Test Account (Supabase Auth)
+**🟢 Deployed Link:** [https://mern-test-six.vercel.app/](https://mern-test-six.vercel.app/)
+**📧 Email:** `testuser@jymarkb.cloud`  
+**🔑 Password:** `@12345678`
