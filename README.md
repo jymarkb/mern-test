@@ -55,5 +55,5 @@ yarn database
 ```
 
 ## 🔒 Test Account Supabase Auth
-**email** = testuser@jymarkb.cloud
+**email** = testuser@jymarkb.cloud  
 **password** = @12345678
