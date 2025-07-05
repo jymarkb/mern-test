@@ -273,7 +273,7 @@ const EmployeeForm = ({ params }: { params: string }) => {
                     alt="Preview"
                     height={200}
                     width={200}
-                    onError={(e) => fallbackImage({ e: e, src: "" })}
+                    onError={(e) => fallbackImage(e)}
                   />
                 </div>
               </>

@@ -35,11 +35,11 @@ const DeleteDialog: React.FC<DeleteDialogType> = ({
           <div className="flex mt-2 gap-4">
             <div className="image-wrapper">
               <img
-                src={`/upload/${data.photo}`}
+                src={`upload/${data.photo}`}
                 alt="employee image"
                 height={100}
                 width={100}
-                onError={(e) => fallbackImage({ e: e, src: "" })}
+                onError={(e) => fallbackImage(e)}
               />
             </div>
             <div className="profile-wrapper flex flex-col justify-center">

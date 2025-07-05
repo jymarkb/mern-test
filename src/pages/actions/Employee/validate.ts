@@ -4,10 +4,9 @@ export const handleTel = (e: React.SyntheticEvent) => {
   input.value = input.value.replace(/[^0-9+]/g, "");
 };
 
-export const fallbackImage = ({e, src}: {e: React.SyntheticEvent<HTMLImageElement, Event>; src: string}
-) => {
+export const fallbackImage = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
   e.currentTarget.onerror = null;
-  e.currentTarget.src = `${src}/upload/temp.jpg`;
+  e.currentTarget.src = "/upload/temp.jpg";
 };
 
 export const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {

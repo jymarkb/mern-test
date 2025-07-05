@@ -13,10 +13,10 @@ export const columns: ColumnDef<TableEmployee>[] = [
     cell: ({ row }) => (
       <div className="flex justify-center py-1">
         <img
-          src={`public/upload/${row.getValue("photo")}`}
+          src={`upload/${row.getValue("photo")}`}
           alt="employee photo"
           className="w-12 h-12 object-cover"
-          onError={(e) => fallbackImage({ e: e, src: "public" })}
+          onError={(e) => fallbackImage(e)}
         />
       </div>
     ),
