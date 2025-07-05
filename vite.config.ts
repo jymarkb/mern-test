@@ -1,18 +1,23 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
-import {resolve} from 'path';
+import { resolve } from 'path';
 
-const root = resolve(__dirname, 'src')
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
 
-export default defineConfig({
-  plugins: [react()],
-  root,
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
+  return {
+    plugins: [react()],
+    root: 'src',
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, './src'),
+      },
     },
-  },
-  server: {
-    port: 3000
-  }
+    server: {
+      port: 3000,
+    },
+    define: {
+      'import.meta.env.VITE_BACKEND_URL': JSON.stringify(env.VITE_BACKEND_URL),
+    },
+  };
 });
