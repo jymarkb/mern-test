@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { supabase } from "@/supabase/supabaseClient";
+import { supabase } from "@/supabase/client";
 
 interface AuthRouteProps {
   children: React.ReactNode;
@@ -10,14 +10,19 @@ export const AuthRoute = ({ children }: AuthRouteProps) => {
   const [checking, setChecking] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
+  const isLoginPage = location.pathname === "/login";
 
   useEffect(() => {
     const checkSession = async () => {
       const { data, error } = await supabase.auth.getSession();
 
-      if (!data.session) {
-        navigate("/login");
-      } else {
+      if (data.session && isLoginPage) {
+        navigate("/employee");
+      }
+
+      if(!data.session && !isLoginPage){
+        navigate("/login")
+      }else{
         setChecking(false);
       }
     };
