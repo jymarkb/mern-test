@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     root: "src",
+    publicDir: "../public",
     build: {
       outDir: "../dist",
       emptyOutDir: true,
