@@ -1,7 +1,7 @@
 import Login from "@/components/Auth/login";
 const Home = () => {
     return (
-        <Login/>
+        <div>Home Page</div>
     )
 }
 

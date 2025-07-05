@@ -1,7 +1,10 @@
 import { RouteObject } from "react-router-dom";
-import Home from "@/pages/Home"
-import Employee from "@/pages/Employee/Employee"
-import EmployeeForm from "@/pages/Employee/form/form"
+import Home from "@/pages/Home";
+import Employee from "@/pages/Employee/Employee";
+import EmployeeForm from "@/pages/Employee/form/form";
+import Login from "@/components/Auth/login";
+import { AuthRoute } from "./authRoute";
+import { Navigate } from "react-router-dom";
 
 const routes: RouteObject[] = [
   {
@@ -9,16 +12,36 @@ const routes: RouteObject[] = [
     element: <Home />,
   },
   {
+    path: "/login",
+    element: <Login />,
+  },
+  {
     path: "/employee",
-    element: <Employee />,
+    element: (
+      <AuthRoute>
+        <Employee />
+      </AuthRoute>
+    ),
   },
   {
     path: "/create",
-    element: <EmployeeForm params="create" />,
+    element: (
+      <AuthRoute>
+        <EmployeeForm params="create" />
+      </AuthRoute>
+    ),
   },
   {
     path: "/edit/:id",
-    element: <EmployeeForm params="edit" />,
+    element: (
+      <AuthRoute>
+        <EmployeeForm params="edit" />
+      </AuthRoute>
+    ),
+  },
+  {
+    path: "*",
+    element: <Navigate to="/" replace />,
   },
 ];
 
