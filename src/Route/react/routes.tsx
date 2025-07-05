@@ -1,6 +1,7 @@
 import { RouteObject } from "react-router-dom";
 import Home from "@/pages/Home"
-import Employee from "@/pages/Employee"
+import Employee from "@/pages/Employee/Employee"
+import EmployeeForm from "@/pages/Employee/form/form"
 
 const routes: RouteObject[] = [
   {
@@ -10,6 +11,14 @@ const routes: RouteObject[] = [
   {
     path: "/employee",
     element: <Employee />,
+  },
+  {
+    path: "/create",
+    element: <EmployeeForm params="create" />,
+  },
+  {
+    path: "/edit/:id",
+    element: <EmployeeForm params="edit" />,
   },
 ];
 
