@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllAccountType } from '@/Repository/accountType.repository';
+import { getAllAccountType } from '@/controllers/accountType.controller';
 
 const router = Router();
 

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { upload } from "@/lib/multer-upload";
-import { getAllEmployees, addNewEmployee, updateEmployee, getOneEmployee, deleteEmployee } from "@/Repository/employee.repository";
+import { getAllEmployees, addNewEmployee, updateEmployee, getOneEmployee, deleteEmployee } from "@/controllers/employee.controller";
 
 const router = Router();
 

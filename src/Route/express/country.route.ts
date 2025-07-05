@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getCountries } from '@/Repository/country.repository';
+import { getCountries } from '@/controllers/country.controller';
 
 const router = Router();
 
