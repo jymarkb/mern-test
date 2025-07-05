@@ -18,25 +18,25 @@ const routes: RouteObject[] = [
   {
     path: "/employee",
     element: (
-      <AuthRoute>
         <Employee />
-      </AuthRoute>
+      // <AuthRoute>
+      // </AuthRoute>
     ),
   },
   {
     path: "/create",
     element: (
-      <AuthRoute>
         <EmployeeForm params="create" />
-      </AuthRoute>
+      // <AuthRoute>
+      // </AuthRoute>
     ),
   },
   {
     path: "/edit/:id",
     element: (
-      <AuthRoute>
         <EmployeeForm params="edit" />
-      </AuthRoute>
+      // <AuthRoute>
+      // </AuthRoute>
     ),
   },
   {

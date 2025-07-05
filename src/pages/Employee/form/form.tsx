@@ -286,7 +286,7 @@ const EmployeeForm = ({ params }: { params: string }) => {
             <div className="col-span-2 flex justify-center">
               <button
                 type="submit"
-                className="bg-primary py-2 rounded text-white w-[200px]"
+                className="bg-primary py-2 rounded text-white w-[200px] cursor-pointer"
               >
                 Submit
               </button>
