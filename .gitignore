@@ -2,5 +2,6 @@
 node_modules
 /generated
 /src/public/upload/*
+/public/upload/
 .yarn
 dist/*
